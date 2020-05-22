@@ -1,3 +1,109 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo-name {
+    display: flex;
+}
+
+h1 {
+    color: purple;
+    margin-top: 3px;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+h6 {
+    margin-top: 1px;
+}
+
+h3 {
+    font-family: 'Balsamiq Sans', cursive;
+    color: purple;
+    font-size: 25px;
+}
+
+.logo {
+    height: 50px;
+}
+
+
 .hidden {
     display: none;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.label {
+    background-color: rgba(128,0,128, 0.7);
+}
+
+.submit-button {
+    display: block;
+    border-radius: 40%;
+    background-color: none;
+    text-emphasis: bold;
+    border: solid 2px rgba(128,0,128, 0.7);
+}
+
+.submit-button:hover {
+    height: 150%;
+    background-color: rgb(13, 153, 139);
+    color: white;
+}
+
+.book-input {
+    width: 172.567px;
+    background-color: rgba(65, 64, 64, 0.664);
+    color: rgba(128,0,128, 1);
+    border-radius: 5px;
+}
+
+.intro-page {
+    margin-right:auto;
+    margin-left: auto;
+    padding-right: 5%;
+    padding-left: 5%;
+    font-size: small;
+    text-align: justify;
+}
+
+li {
+    list-style: none;
+}
+
+.results-ul {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.result-li {
+    border: solid 3px purple;
+    margin: 5px;
+    padding: 3px;
+    border-radius: 1%;
+    background-color: whitesmoke;
+    color: black;
+    padding: 5%;
+    padding-top: 0%;
+}
+
+.book-vector {
+    width: 35px;
+}
+
+/* add space and limit per line, then looks pretty good on comp
+ul {
+    display: flex;
+}
+*/
