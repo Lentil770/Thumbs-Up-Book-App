@@ -4,23 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>API Hack Capstone-Thumbs Up books and Movies</title>
+    <title>API Hack Capstone-Thumbs Up book recommendation service</title>
+    <link rel='stylesheet' href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&family=Montserrat&display=swap" rel="stylesheet"> 
 </head>
 <body>
     <header class='navbar'>
-        <img src='' alt='' class='logo'>
-        <h1>Thumbs Up</h1>
+        <section class='logo-name'>
+            <img src='https://image.flaticon.com/icons/svg/1533/1533913.svg' alt='thumbs up logo' class='logo'><!--turn into link to main pae to reload-->
+            <h1>Thumbs Up</h1>
+        </section>
+        <h6>B"H</h6>
     </header>
-    <main class='main-page'>
-        <fieldset class='input'>
-            <label for="book-input" class="book-input-label label">Book:</label>
-            <input type="text" placeholder="the book i want to look up is..." id='book-input' class='book-input'>
-            
-            <label for="movie-input" class="movie-input-label label">Movie:</label>
-            <input type="text" class="movie-input" id='movie-input' placeholder="the movie i want to look up...">
-            
-            <input type='submit' class='submit-button' value="Recommend for me!">
-        </fieldset>
+    <main class='search-bar'>
+        <form class='input js-input'> <!--alt submit as magnifiying glass, no label and current label as placeholder-->
+            <label for="book-input" class="book-input-label label">I want more books like...</label>
+            <input required type="text" placeholder="e.g. The Book Thief" id='book-input' class='book-input js-book-input'>           
+            <input type='submit' class='submit-button' value="Work the magic!">
+        </form>
     </main>
+    <section class='intro-page js-intro-page'>
+        <p class='app-description'>Enter a book title or author you like above to recommendations for more
+                great books with synopsis, reviews, link to order and more!</p>
+    </section>
+
+    <section class='hidden results js-results'>
+        <ul class="results-ul js-results-ul"></ul>
+    </section>
+
+    <section class='hidden fail-page js-fail-page'>
+        <h2>SORRY</h2>
+        <h3>Your search failed for some reason, please do try again soon</h3>
+        <p class='js-error'>this should list cause of Error</p>
+        <a href="" class='homepage-link'>return to the home page</a>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </body>
 </html>
