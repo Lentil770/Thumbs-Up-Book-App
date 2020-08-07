@@ -21,29 +21,11 @@ function renderPage(responseJson) {
         );
         $('.js-results').removeClass('hidden');
     };
- //  similar.results[i].wUrl = wikipedia link?
-/*   google books: 
-buyLink .description, .pageCount, mainCategory/ categories, authors[can be range]
- averageRating,ratingsCount, imageLinks (thumbnail, small...)
- GET https://www.googleapis.com/books/v1/volumes/zyTCAlFPjgYC?key=yourAPIKey 
-
-  !  for each result (max 10?)
-   ! resultsul.append(
-    !    section book-result with: 
-     !   book title, 
-      £  author
-      £  rating(stars), count
-      !  synopsis
-      £ categpries  genres 
-        link to more reviews
-       googlebooks .buyLink link to buy it
-        extra: search for recommendations for this book/amazon excerpt from the book?   
-    )      */
-}
+};
 
 
 
-function formatTasteDiveRequest(searchID) { //need to fix it for using bookID from google resul button
+function formatTasteDiveRequest(searchID) { 
     console.log('formattastediverequest running');
     const apiKey = '352618-ChayaLen-VGCEXWH6'
     const bookID = searchID;
@@ -81,9 +63,6 @@ function fetchTasteDiveFunc(searchID) {
 }
 
 function renderSearchResults(responseJson) {
-    //in here basically render button of each book title and author, and message telling users to select which one they want recommendations for.
-    //use renderPAge() for inspiration etc
-    // button onClick call fetchTastedivefunc(searchbookid)
     console.log('rendersearchresults is running', responseJson);
     $('.js-results-ul').html('');
     $('.js-results-select').removeClass('hidden');
@@ -108,9 +87,7 @@ function renderSearchResults(responseJson) {
         console.log('recommended nutton clicked, this=:', $(this).val() );
         fetchTasteDiveFunc($(this).val()) 
     })
-} //works except: fix when under ten results doesnt raise error!? tried changing i< response.length...
-
-
+} 
 
 
 function fetchSearchFunc() {
@@ -139,9 +116,6 @@ function fetchSearchFunc() {
 
 
 function renderCurrentBestsellerResults(responseJson) {
-    //in here basically render button of each book title and author, and message telling users to select which one they want recommendations for.
-    //use renderPAge() for inspiration etc
-    // button onClick call fetchTastedivefunc(searchbookid)
     console.log('rendersearchresults is running', responseJson);
     $('.js-results-ul').html('');
     $('.js-results-select').removeClass('hidden');
@@ -166,8 +140,7 @@ function renderCurrentBestsellerResults(responseJson) {
         console.log('recommended nutton clicked, this=:', $(this).val() );
         fetchTasteDiveFunc($(this).val()) 
     })
-} //works except: fix when under ten results doesnt raise error!? tried changing i< response.length...
-
+}
 function fetchCurrent() {
     console.log('fetchcurrent function, here i want to fetch current bestsellers (eg) and on page load display them as recommended books');
     fetch('https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=Qgs1AcncGyAGofxS7FMaXJ1ZI3GCTpB0')
@@ -196,11 +169,6 @@ function watchpage() {
         fetchSearchFunc();
         console.log('watchpage finished');
     });
-    /*
-     when submit clicked,
-     event.preventdefault
-    format api requests (all of them )
-    fetch (all of them) (function which will fetch all of them)   */
 };
 
 
