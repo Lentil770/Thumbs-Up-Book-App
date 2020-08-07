@@ -1,3 +1,7 @@
+* {
+    text-align: center;
+}
+
 body {
     background-color: black;
     color: white;
@@ -57,6 +61,7 @@ header {
     border: solid 2px rgba(128,0,128, 0.7);
 }
 
+
 .submit-button:hover {
     height: 150%;
     background-color: rgb(13, 153, 139);
@@ -107,3 +112,29 @@ ul {
     display: flex;
 }
 */
+
+.description {
+    font-size: x-small;
+}
+
+.search-result-li {
+    text-align: center;
+    border: solid 3px purple;
+    margin: 5px;
+    padding: 3px;
+    border-radius: 1%;
+    background-color: rgb(22, 22, 22);
+    color: #925e92;
+    padding: 5%;
+    padding-top: 3%;
+    font-weight: bold;
+}
+
+.book-ul-btn  {
+    background-color: #925e9234;
+    color: rgb(161, 0, 161);
+}
+
+.book-ul-btn:hover {
+    background-color: black;
+}
